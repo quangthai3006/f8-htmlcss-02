@@ -23,6 +23,25 @@ body {
     margin   : 0 auto;
 }
 
+.heading {
+    color      : #171100;
+    font-family: var(--font-heading);
+    font-weight: 700;
+
+}
+
+.heading.lv1 {
+    font-size     : 5.8rem;
+    line-height   : 1.26;
+    letter-spacing: -1.16px;
+}
+
+.heading.lv2 {
+    font-size     : 3.8rem;
+    line-height   : 1.17;
+    letter-spacing: -0.76px;
+}
+
 a {
     text-decoration: none;
 }
@@ -112,8 +131,8 @@ a {
 
 /* Hero */
 .hero {
-    padding-top: 56px;
-    background : #FFFCF4;
+    padding   : 56px 0 65px;
+    background: #FFFCF4;
 
 }
 
@@ -132,6 +151,7 @@ a {
     height       : 685px;
     object-fit   : cover;
     border-radius: 20px;
+    display      : block;
 }
 
 .hero .hero-summary {
@@ -146,7 +166,8 @@ a {
 }
 
 .hero-summary .item {
-    display: flex;
+    display    : flex;
+    align-items: center;
 }
 
 .hero-summary .item .icon {
@@ -195,14 +216,7 @@ a {
     width  : 52%;
 }
 
-.hero .heading {
-    color         : #171100;
-    font-family   : var(--font-heading);
-    font-size     : 5.8rem;
-    font-weight   : 700;
-    line-height   : 1.17;
-    letter-spacing: -1.16px;
-}
+
 
 .hero .desc {
     color      : #5F5B53;
@@ -268,4 +282,47 @@ a {
 
 .hero .stats strong:nth-child(2) {
     margin-left: 28px;
+}
+
+/* Popular */
+.popular {
+    padding   : 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.popular-top .desc {
+    color      : #5F5B53;
+    font-size  : 1.8rem;
+    font-weight: 400;
+    line-height: 1.66;
+    margin-top : 16px;
+    width      : 458px;
+}
+
+.popular .controls-right {
+    display: flex;
+    gap    : 14px;
+}
+
+.popular .control-btn {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    width          : 40px;
+    height         : 40px;
+    border         : 1px solid var(--primary-color);
+    border-radius  : 50%;
+    color          : var(--primary-color);
+    background     : #FFF;
+}
+
+.popular .control-btn:hover {
+    color     : #fff;
+    background: var(--primary-color);
 }
