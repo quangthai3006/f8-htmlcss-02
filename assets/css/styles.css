@@ -42,6 +42,11 @@ body {
     letter-spacing: -0.76px;
 }
 
+.heading.lv3 {
+    font-size  : 1.8rem;
+    line-height: 1.17;
+}
+
 a {
     text-decoration: none;
 }
@@ -61,6 +66,21 @@ a {
 
 .btn:hover {
     opacity: 0.8;
+}
+
+.line-clamp {
+    display           : -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow          : hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2
+}
+
+.word-break-all {
+    word-break: break-all;
 }
 
 /* Header */
@@ -326,3 +346,163 @@ a {
     color     : #fff;
     background: var(--primary-color);
 }
+
+.popular .courses-list {
+    display   : flex;
+    gap       : 30px;
+    margin-top: 55px;
+}
+
+.popular .course-item {
+    flex         : 1;
+    border-radius: 12px;
+    border       : 1px solid #E2DFDA;
+    background   : #FFF;
+    overflow     : hidden;
+    /* transition: box-shadow 0.3s ease; */
+    /* Hiệu ứng đổ bóng */
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow  : 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .course-item .thumb {
+    width        : calc(100% + 2px);
+    height       : 278px;
+    margin       : -1px;
+    object-fit   : cover;
+    border-radius: 12px 12px 0px 0px;
+    transition   : transform 0.3s ease;
+    /* Hiệu ứng mượt khi zoom */
+}
+
+.course-item .thumb:hover {
+    transform    : scale(1.05);
+    /* Phóng to hình ảnh khi hover */
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+    /* Đổ bóng khi hover */
+}
+
+.popular .course-item .info {
+    margin: 16px 22px 22px;
+}
+
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a {
+    color        : #171100;
+    font-size    : 1.8rem;
+    font-weight  : 600;
+    line-height  : 1.66;
+    padding-right: 6px;
+}
+
+.popular .rating .value {
+    color      : #FEA31B;
+    font-size  : 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+
+.popular .course-item .desc {
+    color      : #5F5B53;
+    font-size  : 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+    margin     : 6px 0 12px;
+}
+
+
+.popular .foot .price {
+    color      : #171100;
+    font-size  : 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .foot button {
+    border: none;
+}
+
+.popular .foot button:hover {
+    color     : #fff;
+    background: var(--primary-color);
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 135px;
+    background: #2E2100;
+    padding   : 96px 0;
+}
+
+.feedback-item {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.feedback-item .avatar {
+    width        : 72px;
+    height       : 72px;
+    border-radius: 50%;
+    object-fit   : cover;
+}
+
+.feedback-item .info-left .title {
+    margin-top : 18px;
+    color      : #F7F7F7;
+    font-family: var(--font-heading);
+    font-size  : 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+}
+
+.feedback-item .info-left .desc {
+    margin     : 4px 0 28px;
+    color      : #BFBCB2;
+    font-size  : 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.feedback-item .info-left .dots {
+    display: flex;
+}
+
+.feedback-item .info-left .dot {
+    width        : 6px;
+    height       : 6px;
+    border-radius: 50%;
+    background   : #634700;
+    margin-right : 6px;
+    cursor       : pointer;
+
+}
+
+.feedback-item .info-left .dot.active {
+    background: var(--primary-color);
+    cursor    : default;
+}
+
+.feedback-item .content-right {
+    width: 66%;
+}
+
+.feedback-item blockquote {
+    color      : #FFF;
+    font-size  : 2.6rem;
+    font-style : italic;
+    font-weight: 400;
+    line-height: 1.54;
+}
+
+/* Features  */
